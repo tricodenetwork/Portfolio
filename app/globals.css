@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --body-color: rgba(66, 78, 96, 1);
+  --body-font-family: "WorkSans-Regular", Helvetica;
+  --body-font-size: 26px;
+  --body-font-style: normal;
+  --body-font-weight: 400;
+  --body-letter-spacing: 0px;
+  --body-line-height: 30px;
+  --header-color: rgba(19, 34, 56, 1);
+  --header-font-family: "WorkSans-SemiBold", Helvetica;
+  --header-font-size: 28px;
+  --header-font-style: normal;
+  --header-font-weight: 600;
+  --header-letter-spacing: 0px;
+  --header-line-height: 100%;
+  --indicatot: rgba(252, 192, 40, 1);
+  --main-header-font-family: "Poppins-SemiBold", Helvetica;
+  --main-header-font-size: 52px;
+  --main-header-font-style: normal;
+  --main-header-font-weight: 600;
+  --main-header-letter-spacing: 0px;
+  --main-header-line-height: 56px;
+  --sub-head-font-family: "WorkSans-SemiBold", Helvetica;
+  --sub-head-font-size: 28px;
+  --sub-head-font-style: normal;
+  --sub-head-font-weight: 600;
+  --sub-head-letter-spacing: 0px;
+  --sub-head-line-height: 24px;
+  --tiny-text-font-family: "WorkSans-Medium", Helvetica;
+  --tiny-text-font-size: 24px;
+  --tiny-text-font-style: normal;
+  --tiny-text-font-weight: 500;
+  --tiny-text-letter-spacing: 0px;
+  --tiny-text-line-height: 30px;
+}
+/* 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.list div:hover > .arrow {
+  rotate: 540deg;
+  transition: all 0.3s;
+}
+
+.list:hover > .submenu {
+  height: auto;
+  transition: all 1s;
+  opacity: 1;
+}
