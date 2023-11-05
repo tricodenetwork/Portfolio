@@ -22,6 +22,9 @@ export default function RootLayout({
         <main className='flex min-h-screen flex-col items-center justify-start '>
            {children}
         </main>
+        <footer className="grid place-content-center min-h-[20vh] text-white bg-gray-800">
+          <div className="text-center">Copyright © 2023 .</div>
+        </footer>
       </body>
     </html>
   );

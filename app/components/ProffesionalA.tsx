@@ -40,7 +40,7 @@ const images = [
 ];
 const ProfessionalA = () => {
   return (
-    <div className="text-center w-full p-5 py-20">
+    <div className="text-center w-full md:px-20 m-auto p-5 py-20 bg-white">
       <h4 className="text-center text-[48px] text-bold">
         {" "}
         Professional Association{" "}

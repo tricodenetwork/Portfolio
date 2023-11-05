@@ -58,7 +58,7 @@ export default function Home() {
       <section>
        <ProfessionalA/>
       </section>
-      <section className="bg-[#F6F5F5]">
+      <section className="bg-[#F6F5F5] p-2">
         <div className="text-center">
           <h2 className=" font-bold text-[52px] py-10">Interest</h2>
           <p>Politics: Aspirant for Senate House, 2019 Federal Republic of Nigeria, Community service and environmental protection programs.</p>
