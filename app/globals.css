@@ -75,3 +75,60 @@ body {
   transition: all 1s;
   opacity: 1;
 }
+
+
+
+
+
+.scroll-container {
+  overflow-x: scroll;
+  white-space: nowrap;
+  padding: 10px 0;
+  /* Hide scrollbar for WebKit-based browsers */
+  scrollbar-width: none; /* Firefox will use its default scrollbar style */
+  -ms-overflow-style: none; /* Hide scrollbar for Microsoft Edge */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit-based browsers */
+}
+
+.scroll-item {
+  display: inline-block;
+  
+  margin-right: 10px;
+  position: relative;
+}
+
+.hide-scroll{
+scrollbar-width: none; /* Firefox will use its default scrollbar style */
+  -ms-overflow-style: none; /* Hide scrollbar for Microsoft Edge */
+}
+.hide-scroll::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit-based browsers */
+}
+
+/*"center", "left1", "left", "right", "right1"*/
+
+.center{
+background:  #FCC028;
+}
+
+.left{
+  background:  #28293E;
+  }
+  
+.right1{
+  background:  #EF6D58;
+  }
+  
+.right{
+  background:  #28293E;
+  }
+  
+.left1{
+  background:  #EF6D58;
+  }
+  
+
+

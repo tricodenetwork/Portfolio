@@ -1,20 +1,24 @@
 import Image from "next/image";
-import Navbar from "./components/Navbar";
-import Hero from "@/public/hero.png";
+
+import Hero from "@/public/assets/hero.png";
+import HandA from "./components/HandA";
+import AboutMe from "./components/AboutMe";
+import ProfessionalA from "./components/ProffesionalA";
+import ContactMe from "./components/Contact";
 
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-start'>
-      <Navbar />
-      <section
+   
+    <div className="w-screen">
+       <section
         id='hero'
-        className=' flex w-full mt-10 relative h-[88vh]  justify-between items-center'
+        className='m-auto w-full flex flex-col gap-3 md:flex-row  mt-10 relative min-h-[88vh]  justify-between items-center'
       >
-        <div className='space-y-10 pl-10 max-h-max'>
-          <h4 className=" w-[60vw] md:w-[60vw]  [font-family:'Poppins-SemiBold',Helvetica] font-semibold text-header-color text-[22px] md:text-[66px] tracking-[0] leading-8 md:leading-[70px]">
+        <div className='space-y-10 max-h-max w-[90%] m-auto md:pl-10'>
+          <h4 className=" w-full md:w-[60vw]  [font-family:'Poppins-SemiBold',Helvetica] font-semibold text-header-color text-[22px] md:text-[66px] tracking-[0] leading-8 md:leading-[70px]">
             Engr. Dr, A. Malik FIMC, CMC.
           </h4>
-          <p className=" w-[38vw] [font-family:'Poppins-Regular',Helvetica] font-normal text-body-color text-[18px] md:text-[26px] tracking-[0] leading-[39px]">
+          <p className=" [font-family:'Poppins-Regular',Helvetica] font-normal text-body-color text-[18px] md:text-[26px] tracking-[0] leading-[39px]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             varius enim in eros elementum tristique.
           </p>
@@ -24,7 +28,7 @@ export default function Home() {
             </div>
           </button>
         </div>
-        <div className='relative  2xl w-[630px]  h-[88vh]'>
+        <div className='relative  2xl w-full md:w-[50%]  h-[88vh]'>
           <Image
             fill
             priority
@@ -35,7 +39,8 @@ export default function Home() {
             style={{
               // width: "100%",
               // height: "auto",
-              objectFit: "cover",
+              objectFit: "contain",
+              zIndex:"-10"
             }}
             src={Hero}
             alt='hero'
@@ -43,7 +48,26 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className='h-[973px] bg-white w-full'></section>
-    </main>
+
+      <section>
+       <HandA/>
+      </section>
+      <section>
+       <AboutMe/>
+      </section>
+      <section>
+       <ProfessionalA/>
+      </section>
+      <section className="bg-[#F6F5F5]">
+        <div className="text-center">
+          <h2 className=" font-bold text-[52px] py-10">Interest</h2>
+          <p>Politics: Aspirant for Senate House, 2019 Federal Republic of Nigeria, Community service and environmental protection programs.</p>
+        </div>
+
+       <ContactMe/>
+      </section>
+     </div>
+      
+  
   );
 }

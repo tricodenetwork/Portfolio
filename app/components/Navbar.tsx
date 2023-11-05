@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { BiMenu } from "react-icons/bi";
 import { MdClose } from "react-icons/md";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { RiArrowDropUpLine } from "react-icons/ri";
+//import { RiArrowDropUpLine } from "react-icons/ri";
 import SubMenu from "./Submenu";
 
 const listStyle: string =
