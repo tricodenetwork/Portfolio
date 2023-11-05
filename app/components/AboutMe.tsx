@@ -12,7 +12,7 @@ const AboutMe = () =>{
 
 
     return (
-        <section className=' w-full md:w-[80%] m-auto flex flex-col justify-around items-center md:flex-row py-10 bg-[#E6E8EB] md:px-10'>
+        <section id="about-me" className=' w-full md:w-[80%] m-auto flex flex-col justify-around items-center md:flex-row py-10 bg-[#E6E8EB] md:px-10'>
             <Image src={Hero } alt="" />
             
             <div className="md:w-1/2 p-5">

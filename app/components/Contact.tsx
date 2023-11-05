@@ -4,7 +4,7 @@ import { BsTelephoneFill } from "react-icons/bs";
 import { IoMdSend } from 'react-icons/io';
 const ContactMe = () => {
   return (
-    <div className=" mt-20 flex flex-col md:flex-row gap-4 justify-between p-10  bg-white w-full md:w-[80%] m-auto rounded-xl">
+    <div id='contact' className=" mt-20 flex flex-col md:flex-row gap-4 justify-between p-10  bg-white w-full md:w-[80%] m-auto rounded-xl">
       <div className="w-full md:w-1/2">
         <h3 className="font-bold text-[52px] mb-10">Contact Me</h3>
 

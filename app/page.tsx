@@ -5,6 +5,7 @@ import HandA from "./components/HandA";
 import AboutMe from "./components/AboutMe";
 import ProfessionalA from "./components/ProffesionalA";
 import ContactMe from "./components/Contact";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -23,9 +24,9 @@ export default function Home() {
             varius enim in eros elementum tristique.
           </p>
           <button className='flex w-[200px] items-center justify-center gap-[10.67px] px-[42.67px] py-[18.67px] relative bg-[#28293e] rounded-[5.33px]  box-border'>
-            <div className='relative w-fit mt-[-1.33px] ml-[-29.17px] mr-[-29.17px] font-header font-[number:var(--header-font-weight)] text-white text-[length:var(--header-font-size)] tracking-[var(--header-letter-spacing)] leading-[var(--header-line-height)] whitespace-nowrap [font-style:var(--header-font-style)]'>
+            <Link href={'#contact'} className='relative w-fit mt-[-1.33px] ml-[-29.17px] mr-[-29.17px] font-header font-[number:var(--header-font-weight)] text-white text-[length:var(--header-font-size)] tracking-[var(--header-letter-spacing)] leading-[var(--header-line-height)] whitespace-nowrap [font-style:var(--header-font-style)]'>
               Get In Touch
-            </div>
+            </Link>
           </button>
         </div>
         <div className='relative  2xl w-full md:w-[50%]  h-[88vh]'>

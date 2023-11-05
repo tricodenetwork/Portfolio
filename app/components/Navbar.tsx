@@ -5,11 +5,12 @@ import { MdClose } from "react-icons/md";
 import { RiArrowDropDownLine } from "react-icons/ri";
 //import { RiArrowDropUpLine } from "react-icons/ri";
 import SubMenu from "./Submenu";
+import Link from "next/link";
 
 const listStyle: string =
   "text-[16px] min-h-max   leading-[16px] list relative cursor-pointer hover:opacity- duration-200  flex flex-col items-center my-[14px] md:mb-0 mt-[40px] md:mt-0 md:text-[20px] md:leading-[20px] text-[#132238] font-semibold";
-const skills = ["Skill", "Education", "Certification/License"];
-const work = ["Work", "Professional", "Volunteer", "Research"];
+const skills = [{title:"Skill", link:'Skill'}, {title:"Education", link:'#Education'}, {title:"Certification/License", link:'#Certification'}];
+const work = [{title:"Experience", link:'Experience'}, {title:"Professional", link:'#Professional'}, {title:"Volunteer", link:'#Volunteer'}, {title:"Research", link:'#Research'}];
 const Navbar = () => {
   // --------------------------------------------VARIABLES
   const [isOpen, setIsOpen] = useState(false);
@@ -32,11 +33,11 @@ const Navbar = () => {
         className={`w-[70vw] menu px-4 mr-7 ${
           !isOpen
             ? "-translate-x-full opacity-0"
-            : "translate-x-0 opacity-100 scale-100"
+            : "translate-x-0 opacity-100 scale-100 z-10"
         }  h-[93vh] md:h-full  duration-300 md:translate-x-0  md:opacity-100 transition-all ease-linear  md:flex-row items-start justify-start md:justify-between md:items-center absolute md:relative top-[6.5vh] md:top-0 left-0 flex flex-col bg-white`}
       >
-        <li className={listStyle}>Honours/Awards</li>
-        <li className={listStyle}>About Me</li>
+        <li className={listStyle}><Link href={'#handa'}>Honours/Awards</Link></li>
+        <li className={listStyle}><Link href={'#about-me'}>About Me</Link></li>
         <li className={listStyle}>
           <div className='flex'>
             <p>Skillsets</p>
@@ -51,7 +52,7 @@ const Navbar = () => {
           </div>
           <SubMenu list={skills} />
         </li>
-        <li className={listStyle}>Certification</li>
+        <li className={listStyle}><Link href={'#certification'}>Certification</Link></li>
         <li className={listStyle}>
           <div className='flex'>
             <p>Experience</p>
@@ -61,9 +62,9 @@ const Navbar = () => {
           </div>
           <SubMenu list={work} />
         </li>
-        <button className='px-5 py-4 absolute md:relative top-[60vh] md:top-0  ml-[12px] md:mr-[  14px] font-semibold text-[20px] tracking-[var(--header-letter-spacing)] [font-style:var(--header-font-style)] leading-[var(--header-line-height)] text-white bg-header-color rounded-md'>
+        <Link href={'#contact'} className='px-5 py-4 absolute md:relative top-[60vh] md:top-0  ml-[12px] md:mr-[  14px] font-semibold text-[20px] tracking-[var(--header-letter-spacing)] [font-style:var(--header-font-style)] leading-[var(--header-line-height)] text-white bg-header-color rounded-md'>
           Contact Me
-        </button>
+        </Link>
       </ul>
       <div
         onClick={toggleMenu}
