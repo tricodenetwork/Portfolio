@@ -27,13 +27,12 @@ const Navbar = () => {
   //------------------------------------------------------------------USE EFFECTS
 
   return (
-    <div className='relative shadow-sm   shadow-slate-300 w-full  flex items-center md:justify-end bg-white h-[7vh] md:h-[12vh]'>
+    <div className='relative shadow-sm z-50 shadow-slate-300 w-full  flex items-center md:justify-end bg-white h-[7vh] md:h-[12vh]'>
       <ul
-        className={`w-[70vw] menu px-4 mr-7 ${
-          !isOpen
+        className={`w-[70vw] menu px-4 mr-7 ${!isOpen
             ? "-translate-x-full opacity-0"
             : "translate-x-0 opacity-100 scale-100"
-        }  h-[93vh] md:h-full  duration-300 md:translate-x-0  md:opacity-100 transition-all ease-linear  md:flex-row items-start justify-start md:justify-between md:items-center absolute md:relative top-[6.5vh] md:top-0 left-0 flex flex-col bg-white`}
+          }  h-[93vh] md:h-full  duration-300 md:translate-x-0  md:opacity-100 transition-all ease-linear  md:flex-row items-start justify-start md:justify-between md:items-center absolute md:relative top-[6.5vh] md:top-0 left-0 flex flex-col bg-white`}
       >
         <li className={listStyle}>Honours/Awards</li>
         <li className={listStyle}>About Me</li>

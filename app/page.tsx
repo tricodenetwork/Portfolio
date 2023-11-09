@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Hero from "@/public/hero.png";
+import Work from "./components/Works/work";
 
 export default function Home() {
   return (
@@ -43,7 +44,9 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className='h-[973px] bg-white w-full'></section>
+      <section className='h-[973px] bg-white w-full'>
+        <Work />
+      </section>
     </main>
   );
 }
