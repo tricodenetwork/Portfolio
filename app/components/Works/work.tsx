@@ -8,16 +8,16 @@ export default function Work() {
     <main className='flex min-h-screen flex-col items-center justify-center'>
       {/* <Navbar /> */}
       <section
-        id='work'
+        id='work_experience'
         className='flex w-full mt-10 px-3 md:px-[5rem] py-[60px] bg-white flex-col justify-center items-center inline-flex'
       >
-        <div className="self-stretch flex-col justify-start items-center gap-[100px] inline-flex">
+        <div className="self-stretch flex-col justify-start items-center gap-5 md:gap-[100px] inline-flex">
           <div className="flex-col justify-start items-center gap-6 flex">
-            <div className="text-slate-800  text-[26px] md:text-[52px] font-semibold font-['Poppins'] leading-[56px]">Work Experience</div>
+            <div className="text-slate-800 text-[26px] md:text-[52px] font-semibold font-['Poppins'] leading-[56px]">Work Experience</div>
           </div>
 
           <div className="flex-col justify-center items-center gap-[50px] flex">
-            <div className="w-full h-auto mx-3 py-8 pr-8 bg-white border border-l-amber-400 border-solid border-2 rounded-[10px] shadow justify-center items-center gap-4 flex">
+            <div className="w-full h-auto mx-3 py-8 pr-3 sm:pr-8 bg-white border border-l-amber-400 border-solid border-2 rounded-[10px] shadow justify-center items-center gap-4 flex">
               <div className="flex-col flex pl-6 gap-4">
                 <div className="self-stretch text-slate-800 text-xl md:text-[28px] font-semibold font-['Work Sans'] leading-7">
                   Unique Oil and Integrated Services Limited Lagos, Nigeria Founder/CEO 2007-Till Date
@@ -30,11 +30,11 @@ export default function Work() {
               </div>
             </div>
 
-            <div className="w-full h-auto py-8 pr-8 bg-white border border-l-amber-400 border-solid border-2 rounded-[10px] shadow justify-center items-start gap-4 flex">
+            <div className="w-full h-auto py-8 pr-3 sm:pr-8 bg-white border border-l-amber-400 border-solid border-2 rounded-[10px] shadow justify-center items-start gap-4 flex">
               <div className="flex-col flex pl-6 gap-4">
                 <div className="self-stretch">
-                  <span className="text-slate-800 text-[28px] font-semibold font-['Work Sans'] leading-7">NAFDAC </span>
-                  <span className="text-slate-800 text-[28px] font-semibold font-['Work Sans'] leading-7">https://www.nafdac.gov.ng</span>
+                  <span className="text-slate-800  text-xl md:text-[28px] font-semibold font-['Work Sans'] leading-7">NAFDAC </span>
+                  <span className="text-slate-800  text-xl md:text-[28px] font-semibold font-['Work Sans'] leading-7">https://www.nafdac.gov.ng</span>
                 </div>
                 <div className="self-stretch">
                   <span className="text-gray-600 text-xl md:text-[26px] font-normal font-['Work Sans'] leading-[30px]">
@@ -60,7 +60,7 @@ export default function Work() {
 
             {works.map(({ id, title, subtitle }) => {
               return (
-                <div key={id} className="w-full h-auto py-8 pr-8 bg-white border border-l-amber-400 border-solid border-2 rounded-[10px] shadow justify-center items-start gap-4 flex">
+                <div key={id} className="w-full h-auto py-8 pr-3 sm:pr-8 bg-white border border-l-amber-400 border-solid border-2 rounded-[10px] shadow justify-center items-start gap-4 flex">
                   {/* <hr className="w-3 h-[300px] bg-amber-400" /> */}
                   <div className="flex-col flex pl-6 gap-4">
                     <div className="self-stretch text-slate-800  text-xl md:text-[28px] font-semibold font-['Work Sans'] leading-7">
