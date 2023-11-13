@@ -35,7 +35,7 @@ export const works = [
     {
       id: 4,
       title: "Call and Mail Members",
-      subtitle: "36th congressional district of the US Congress.",
+      subtitle: "36th congressional district of the US Congress (Senator Dianne Feinstein, Alex Padilla, and Congressman Ted Lieu)",
     },
     {
       id: 5,

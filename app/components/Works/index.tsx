@@ -4,6 +4,7 @@ import Professional from "./Professional";
 import Hero from "@/public/hero.png";
 import { works } from "./datas";
 import Volunteer from "./Volunteer";
+import Research from "./Research";
 
 export default function Experience() {
   return (
@@ -11,6 +12,7 @@ export default function Experience() {
       <Work />
       <Professional />
       <Volunteer />
+      <Research />
     </main>
   );
 }
