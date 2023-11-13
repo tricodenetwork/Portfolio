@@ -10,6 +10,7 @@ const listStyle: string =
   "text-[16px] min-h-max   leading-[16px] list relative cursor-pointer hover:opacity- duration-200  flex flex-col items-center my-[14px] md:mb-0 mt-[40px] md:mt-0 md:text-[20px] md:leading-[20px] text-[#132238] font-semibold";
 const skills = ["Skill", "Education", "Certification/License"];
 const work = ["Work", "Professional", "Volunteer", "Research"];
+
 const Navbar = () => {
   // --------------------------------------------VARIABLES
   const [isOpen, setIsOpen] = useState(false);
