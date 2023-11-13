@@ -6,21 +6,27 @@ import AboutMe from "./components/AboutMe";
 import ProfessionalA from "./components/ProffesionalA";
 import ContactMe from "./components/Contact";
 import Link from "next/link";
+import useFonts from "@/hooks/useFonts";
 
 export default function Home() {
+  const { poppins } = useFonts();
   return (
     <div className=''>
       <section
         id='hero'
-        className='m-auto w-full flex flex-col gap-3 md:flex-row  mt-10 relative min-h-[88vh]  justify-between items-center'
+        className='m-auto w-full flex flex-col gap-3 md:flex-row h-[802px]  relative  justify-between items-center'
       >
-        <div className='space-y-10 max-h-max w-[90%] m-auto md:pl-10'>
-          <h4 className=" w-full md:w-[60vw]  [font-family:'Poppins-SemiBold',Helvetica] font-semibold text-header-color text-[22px] md:text-[66px] tracking-[0] leading-8 md:leading-[70px]">
-            Engr. Dr, A. Malik FIMC, CMC.
+        <div className='space-y-10 max-h-max z-10 ml-[52px]'>
+          <h4
+            style={poppins.style}
+            className=' w-full md:w-[543px] font-semibold text-header-color text-[22px] lg:text-[52px] tracking-[0] leading-8 lg:leading-[70px]'
+          >
+            Dr. Eng. Malik Abdullahi Adaviriku FIMC, CMC.
           </h4>
-          <p className=" [font-family:'Poppins-Regular',Helvetica] font-normal text-body-color text-[18px] md:text-[26px] tracking-[0] leading-[39px]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique.
+          <p className=" [font-family:'Poppins-Regular',Helvetica] lg:w-[645px] font-normal text-body-color text-[18px] md:text-[26px] tracking-[0] leading-[39px]">
+            Engineering Solutions with Expert Consultation. Bridging Vision and
+            Execution for Optimal Results. Where Technical Prowess Meets
+            Strategic Insight.
           </p>
           <button className='flex w-[200px] items-center justify-center gap-[10.67px] px-[42.67px] py-[18.67px] relative bg-[#28293e] rounded-[5.33px]  box-border'>
             <Link
@@ -31,7 +37,7 @@ export default function Home() {
             </Link>
           </button>
         </div>
-        <div className='relative  2xl w-full md:w-[50%]  h-[88vh]'>
+        <div className='relative  2xl w-full md:w-[482px]  h-[802px]'>
           <Image
             fill
             priority
@@ -42,19 +48,18 @@ export default function Home() {
             style={{
               // width: "100%",
               // height: "auto",
-              objectFit: "contain",
+              objectFit: "cover",
               zIndex: "-10",
             }}
             src={Hero}
             alt='hero'
             quality={100}
           />
+          <div className='w-[752px] border border-blue-950 absolute bottom-0 right-[0px] opacity-50 -z-20 h-[752px] rounded-full bg-header-color' />
         </div>
       </section>
 
-      <section>
-        <HandA />
-      </section>
+      <section>{/* <HandA /> */}</section>
       <section>
         <AboutMe />
       </section>
