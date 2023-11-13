@@ -9,9 +9,8 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-   
-    <div className="w-screen">
-       <section
+    <div className=''>
+      <section
         id='hero'
         className='m-auto w-full flex flex-col gap-3 md:flex-row  mt-10 relative min-h-[88vh]  justify-between items-center'
       >
@@ -24,7 +23,10 @@ export default function Home() {
             varius enim in eros elementum tristique.
           </p>
           <button className='flex w-[200px] items-center justify-center gap-[10.67px] px-[42.67px] py-[18.67px] relative bg-[#28293e] rounded-[5.33px]  box-border'>
-            <Link href={'#contact'} className='relative w-fit mt-[-1.33px] ml-[-29.17px] mr-[-29.17px] font-header font-[number:var(--header-font-weight)] text-white text-[length:var(--header-font-size)] tracking-[var(--header-letter-spacing)] leading-[var(--header-line-height)] whitespace-nowrap [font-style:var(--header-font-style)]'>
+            <Link
+              href={"#contact"}
+              className='relative w-fit mt-[-1.33px] ml-[-29.17px] mr-[-29.17px] font-header font-[number:var(--header-font-weight)] text-white text-[length:var(--header-font-size)] tracking-[var(--header-letter-spacing)] leading-[var(--header-line-height)] whitespace-nowrap [font-style:var(--header-font-style)]'
+            >
               Get In Touch
             </Link>
           </button>
@@ -41,7 +43,7 @@ export default function Home() {
               // width: "100%",
               // height: "auto",
               objectFit: "contain",
-              zIndex:"-10"
+              zIndex: "-10",
             }}
             src={Hero}
             alt='hero'
@@ -51,24 +53,25 @@ export default function Home() {
       </section>
 
       <section>
-       <HandA/>
+        <HandA />
       </section>
       <section>
-       <AboutMe/>
+        <AboutMe />
       </section>
       <section>
-       <ProfessionalA/>
+        <ProfessionalA />
       </section>
-      <section className="bg-[#F6F5F5] p-2">
-        <div className="text-center">
-          <h2 className=" font-bold text-[52px] py-10">Interest</h2>
-          <p>Politics: Aspirant for Senate House, 2019 Federal Republic of Nigeria, Community service and environmental protection programs.</p>
+      <section className='bg-[#F6F5F5] p-2'>
+        <div className='text-center'>
+          <h2 className=' font-bold text-[52px] py-10'>Interest</h2>
+          <p>
+            Politics: Aspirant for Senate House, 2019 Federal Republic of
+            Nigeria, Community service and environmental protection programs.
+          </p>
         </div>
 
-       <ContactMe/>
+        <ContactMe />
       </section>
-     </div>
-      
-  
+    </div>
   );
 }

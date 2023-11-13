@@ -17,13 +17,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={font.className}>
+      <body className={`${font.className}`}>
         <Navbar />
         <main className='flex min-h-screen flex-col items-center justify-start '>
-           {children}
+          {children}
         </main>
-        <footer className="grid place-content-center min-h-[20vh] text-white bg-gray-800">
-          <div className="text-center">Copyright © 2023 .</div>
+        <footer className='grid place-content-center min-h-[20vh] text-white bg-gray-800'>
+          <div className='text-center'>Copyright © 2023 .</div>
         </footer>
       </body>
     </html>
