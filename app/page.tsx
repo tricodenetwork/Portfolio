@@ -2,6 +2,7 @@ import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Hero from "@/public/hero.png";
 import Work from "./components/Works/index";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -47,6 +48,7 @@ export default function Home() {
       <section className='h-auto w-full'>
         <Work />
       </section>
+      <Footer />
     </main>
   );
 }
