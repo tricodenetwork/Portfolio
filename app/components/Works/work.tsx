@@ -11,7 +11,7 @@ export default function Work() {
         id='work_experience'
         className='flex w-full mt-10 px-3 md:px-[5rem] py-[60px] bg-white flex-col justify-center items-center inline-flex'
       >
-        <div className="self-stretch flex-col justify-start items-center gap-5 md:gap-[100px] inline-flex">
+        <div className="self-stretch flex-col justify-start items-center gap-5 md:gap-[50px] inline-flex">
           <div className="flex-col justify-start items-center gap-6 flex">
             <div className="text-slate-800 text-[26px] md:text-[52px] font-semibold font-['Poppins'] leading-[56px]">Work Experience</div>
           </div>

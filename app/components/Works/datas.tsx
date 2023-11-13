@@ -15,3 +15,36 @@ export const works = [
     //   subtitle: "",
     // },
   ];
+
+  export const volunteers = [
+    {
+      id: 1,
+      title: "Regional Director, April 2023 - Till Date",
+      subtitle: `The Borgen Project, Los Angeles, California (36th congressional district).`,
+    },
+    {
+      id: 2,
+      title: "Advocate for Bill Sponsorship",
+      subtitle: `Members of the US 36th Congressional District, California, USA.`,
+    },
+    {
+      id: 3,
+      title: "Meet with Members of US Congress",
+      subtitle: "Meet with Members of US Congress",
+    },
+    {
+      id: 4,
+      title: "Call and Mail Members",
+      subtitle: "36th congressional district of the US Congress.",
+    },
+    {
+      id: 5,
+      title: "Mobilize people to call and mail members of the US Congress.",
+      subtitle: "Mobilize people to call and mail members of the US Congress.",
+    },
+    {
+      id: 6,
+      title: "Fund Raising",
+      subtitle: "Fund Raising",
+    },
+  ];
