@@ -20,62 +20,97 @@ export default function Research() {
       </div>
 
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mt-5 mx-[2rem] justify-center items-start gap-3">
-        <div className="w-[94%] flex-col justify-start items-center gap-[15px]">
-          <div className="flex-col justify-start items-end gap-8 mt-3 inline-flex">
-            <div className="w-full justify-center items-center inline-flex">
-              <div className="flex flex-col justify-start items-start gap-8">
-                <div className="text-slate-800 text-xl md:text-[20px] font-semibold">International Journal of
-                  Public Administration and Management Research (IJPAMR),
-                  <br />
-                  <div className="mt-3">ISSN2346-7215(Print)<br /> ISSN: 2350-2231(Online).</div>
+        <div className="w-[94%] flex flex-col justify-start items-center gap-[15px]">
+          <div className="text-slate-800 text-xl md:text-[20px] font-semibold">
+            Westcliff University/Department of Business Administration/Irvine, CA, USA Doctoral Student 2017-2022
+          </div>
+          <div className="flex-col justify-start items-start gap-4 flex">
+            <span className="text-gray-600 text-xl md:text-[16px] font-normal font-['Work Sans'] leading-[30px]">
+              Dissertation Chairman: Professor Elsayess Mahmood: Ph.D., PMP, MCS. Methodologist: Professor Simin Hojat, Ph.D.
+              Subject Matter Expert: Professor Omar Haddad DBA Program Chair: Professor Alex Sherm
+              Doctoral Dissertation: Integrating Blockchain into Electronic Stamp Duty Collections (A Case Study).
+            </span>
+            <div className="text-slate-800 text-xl md:text-[20px] font-semibold font-['Work Sans'] leading-normal">Brief description of Project</div>
+            <span className="text-gray-600 text-xl md:text-[16px] font-normal font-['Work Sans'] leading-[30px]">
+              In this scholarly presentation, I embark on an immersive journey into the heart of a profound
+              financial syndicate fraud that has cast a shadow over Nigeria's banking landscape. This
+              comprehensive examination seeks to unravel the intricate layers of the orchestrated deception,
+              dissecting the mechanisms, methodologies, and underlying factors that culminated in its advanced
+              form. Moreover, my exploration extends beyond analysis, culminating in the proposal of a pioneering
+              solution poised to redefine the trajectory of financial integrity within the nation.
+            </span>
 
-                </div>
-                <div className="flex-col justify-start items-start gap-4 flex">
-                  <span className="text-gray-600 text-xl md:text-[16px] font-normal font-['Work Sans'] leading-[30px]">Editorial Board Member: 2023-till date{" "}
-                    <a href='https://journals.rcmss.com/index.php/ijpamr/about/editorialTeam'
-                      className="text-gray-600 text-xl md:text-[16px] font-normal font-['Work Sans'] leading-[30px]">
-                      https://journals.rcmss.com/index.php
-                      /ijpamr/about/editorialTeam
-                    </a>
-                  </span>
-                  <div className="text-gray-600 text-[16px] font-normal font-['Work Sans'] leading-[30px]">
-                    {showMore ? (
-                      <>
-                        Reviewed and selected Journal papers for publication. Paper reviewed Invitation: Institute of
-                        Management Consultants & London Graduate School Panel: Chartered Management Consultants Certification
-                        Panel, Nigeria Paper: IMC-Nigeria: CMC Certification Workshop & Membership/Fellowship Induction Assessment Papers
-                        Number of Papers Reviewed: Two Invitation: International Journal of Public Administration and Management
-                        Research (IJPAMR), ISSN2346-7215(Print)ISSN: 2350-2231(Online). Numbers of Articles Reviewed: Two
-                        Climate Change and Urban Poor: Water-related Behavior in Jakarta Population and Housing Census in Nigeria
-                        Invitation: (The Author) Professor Mahmood Elsayess, Ph.D., PMP, MCS Book Endorser Author: Professor
-                        Mahmood Elsayess, Ph.D., PMP, MCS Title: The-anatomy-of-an-English-paragraph ISBN: 9798823010689
-                      </>
-                    ) : (
-                      <>
-                        Reviewed and selected Journal...
-                      </>
-                    )}
-                  </div>
-                  <button onClick={toggleShowMore}>
-                    <div className="text-gray-600 text-2xl font-semibold font-['Work Sans'] leading-[30px]">{showMore ? 'Read less' : 'Read more'}</div>
-                  </button>
-                </div>
-              </div>
-            </div>
+            <span className="text-gray-600 text-xl md:text-[16px] font-normal font-['Work Sans'] leading-[30px]">
+              <span className="font-bold">Unveiling the Fraud Landscape:</span>{" "}
+              In this scholarly presentation, I embark on an immersive journey into the heart of a profound
+              financial syndicate fraud that has cast a shadow over Nigeria's banking landscape. This
+              comprehensive examination seeks to unravel the intricate layers of the orchestrated deception,
+              dissecting the mechanisms, methodologies, and underlying factors that culminated in its advanced
+              form. Moreover, my exploration extends beyond analysis, culminating in the proposal of a pioneering
+              solution poised to redefine the trajectory of financial integrity within the nation.
+            </span>
+
+            <span className="text-gray-600 text-xl md:text-[16px] font-normal font-['Work Sans'] leading-[30px]">
+              <span className="font-bold">Understanding the "How" and "Methods":</span>{" "}
+              Central to my academic endeavor is a comprehensive understanding of the modus operandi adopted
+              by the syndicate. I meticulously dissect the intricate methods employed, ranging from falsified
+              documentation to strategic collusion, unveiling the intricate tactics that
+              enabled the fraud's gradual evolution into an advanced and complex
+            </span>
+            <button onClick={toggleShowMore}>
+              <div className="text-gray-600 text-2xl font-semibold font-['Work Sans'] leading-[30px]">{showMore ? 'Read less' : 'Read more'}</div>
+            </button>
           </div>
         </div>
 
-        <div className="w-[94%] flex-col justify-start items-center gap-[15px]">
-          <div className="flex-col justify-start items-start gap-8 mt-3 inline-flex">
-            <div className="text-slate-800 text-xl md:text-[20px] font-semibold font-['Work Sans'] leading-7">Exhibitor @ the 31st Council for the Regulation of Engineering in Nigeria Assembly, 2023</div>
-            <div className="h-auto">
-              <span className="text-gray-800 text-xl md:text-[16px] font-normal font-['Work Sans']">Editorial Board Member: 2023-till date </span>
-              <a href='https://journals.rcmss.com/index.php/ijpamr/about/editorialTeam'
-                className="text-gray-600 text-xl md:text-[16px] font-normal font-['Work Sans'] leading-[30px]">
-                https://journals.rcmss.com/index.php
-                /ijpamr/about/editorialTeam
-              </a>
-            </div>
+        <div className="w-[94%] flex flex-col justify-start items-center gap-[15px]">
+          <div className="text-slate-800 text-xl md:text-[20px] font-semibold">
+            Coventry University, London Campus/Department of Business Administration/London, UK
+          </div>
+          <div className="flex-col justify-start items-start gap-4 flex">
+            <span className="text-gray-600 text-xl md:text-[16px] font-normal font-['Work Sans'] leading-[30px]">
+              Consulting Fellow 2015 -2016
+              Mentor: Doctor Beeker (Ph.D., MEI, MCMI, FHEA, FRSA).
+              Project Title: “Developing Entry Strategy into the South American and the Caribbean Oil and Gas Market.”
+            </span>
+            <div className="text-slate-800 text-xl md:text-[20px] font-semibold font-['Work Sans'] leading-normal">Tasks</div>
+            <span className="text-gray-600 text-xl md:text-[16px] font-normal font-['Work Sans'] leading-[30px]">
+              Conducted extensive research to identify market entry strategies into South America and the Caribbean region
+              and made categorized recommendations for Genesis Oil and Gas.
+            </span>
+
+            <span className="text-gray-600 text-xl md:text-[16px] font-normal font-['Work Sans'] leading-[30px]">
+              <span className="font-bold">Short-term:</span>{" "}
+              Projects in the production phase are under five years old. Short-term recommendations consist of
+              ongoing projects at the producing stage. Due to the oil price downturn, most Oil and Gas companies
+              are looking for better opportunities to enhance their production while reducing costs. As a
+              short-term strategy, Genesis can enter projects immediately in the producing stages to take advantage
+              of the volatility in the oil and gas industry.
+            </span>
+
+            <span className="text-gray-600 text-xl md:text-[16px] font-normal font-['Work Sans'] leading-[30px]">
+              <span className="font-bold">Mid-term:</span>{" "}
+              Projects in the development phase are 5 – 10 years old. <br />
+              Mid-term recommendations include projects at the exploration stage. This stage of the hydrocarbon
+              production process is a complex and costly business. In contrast, a positive result is not granted,
+              and hydrocarbons can be located in the most inhospitable parts of the world (BP 2008). Oil companies
+              prefer to save funds nowadays, and it is an excellent opportunity for Genesis, with its area of
+              expertise, to join the projects.
+            </span>
+
+            <span className="text-gray-600 text-xl md:text-[16px] font-normal font-['Work Sans'] leading-[30px]">
+              <span className="font-bold">Long-term:</span>{" "}
+              Prospective projects are for more than ten years. <br />
+
+              According to PWC (2016), every oil and gas player, including service providers, can adopt long-term strategies:<br />
+              1. Develop a more robust supply chain management capability;<br />
+              2. Invest in human capital & cost structure,<br />
+              3. Capture the value of technologies, and<br />
+              4. Align the asset and investment portfolio with a future source of value.<br />
+
+              Based on research findings identified that Guyana and Chile are the two countries that seize
+              emerging strategic opportunities. The table below shows the long-term
+            </span>
           </div>
         </div>
 
