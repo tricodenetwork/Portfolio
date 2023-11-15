@@ -11,33 +11,35 @@ import useFonts from "@/hooks/useFonts";
 export default function Home() {
   const { poppins } = useFonts();
   return (
-    <div className=''>
+    <div className='w-full h-max'>
       <section
         id='hero'
-        className='m-auto w-full flex flex-col gap-3 md:flex-row h-[802px]  relative  justify-between items-center'
+        className='m-auto w-full  flex flex-col  pt-[30px] gap-3 md:flex-row  lg:h-[802px]  relative  justify-between items-center'
       >
-        <div className='space-y-10 max-h-max z-10 ml-[52px]'>
+        <div className='space-y-10 h-[1006px] lg:h-full  lg:max-h-max flex flex-col sm:justify-between lg:justify-center  z-10 ml-[52px]'>
           <h4
             style={poppins.style}
-            className=' w-full md:w-[543px] font-semibold text-header-color text-[22px] lg:text-[52px] tracking-[0] leading-8 lg:leading-[70px]'
+            className=' w-full md:w-[543px] font-semibold text-header-color text-[52px] lg:text-[52px] tracking-[0] leading-[70px]'
           >
             Dr. Eng. Malik Abdullahi Adaviriku FIMC, CMC.
           </h4>
-          <p className=" [font-family:'Poppins-Regular',Helvetica] lg:w-[645px] font-normal text-body-color text-[18px] md:text-[26px] tracking-[0] leading-[39px]">
-            Engineering Solutions with Expert Consultation. Bridging Vision and
-            Execution for Optimal Results. Where Technical Prowess Meets
-            Strategic Insight.
-          </p>
-          <button className='flex w-[200px] items-center justify-center gap-[10.67px] px-[42.67px] py-[18.67px] relative bg-[#28293e] rounded-[5.33px]  box-border'>
-            <Link
-              href={"#contact"}
-              className='relative w-fit mt-[-1.33px] ml-[-29.17px] mr-[-29.17px] font-header font-[number:var(--header-font-weight)] text-white text-[length:var(--header-font-size)] tracking-[var(--header-letter-spacing)] leading-[var(--header-line-height)] whitespace-nowrap [font-style:var(--header-font-style)]'
-            >
-              Get In Touch
-            </Link>
-          </button>
+          <div className='space-y-10'>
+            <p className=" [font-family:'Poppins-Regular',Helvetica] lg:w-[645px] font-normal text-body-color text-[18px] md:text-[26px] tracking-[0] leading-[39px]">
+              Engineering Solutions with Expert Consultation. Bridging Vision
+              and Execution for Optimal Results. Where Technical Prowess Meets
+              Strategic Insight.
+            </p>
+            <button className='flex w-[200px] items-center justify-center gap-[10.67px] px-[42.67px] py-[18.67px] relative bg-[#28293e] rounded-[5.33px]  box-border'>
+              <Link
+                href={"#contact"}
+                className='relative w-fit mt-[-1.33px] ml-[-29.17px] mr-[-29.17px] font-header font-[number:var(--header-font-weight)] text-white text-[length:var(--header-font-size)] tracking-[var(--header-letter-spacing)] leading-[var(--header-line-height)] whitespace-nowrap [font-style:var(--header-font-style)]'
+              >
+                Get In Touch
+              </Link>
+            </button>
+          </div>
         </div>
-        <div className='relative  2xl w-full md:w-[482px]  h-[802px]'>
+        <div className=' sm:absolute top-[239px] right-0 lg:relative lg:right-0 lg:top-0 sm:w-[385.43px] sm:h-[561px] 2xl w-full lg:w-[482px]  lg:h-[802px]'>
           <Image
             fill
             priority
@@ -55,11 +57,11 @@ export default function Home() {
             alt='hero'
             quality={100}
           />
-          <div className='w-[752px] border border-blue-950 absolute bottom-0 right-[0px] opacity-50 -z-20 h-[752px] rounded-full bg-header-color' />
+          <div className='sm:w-[527px] sm:h-[527px] lg:w-[752px]  border border-blue-950 absolute bottom-0 right-[0px]  -z-20 lg:h-[752px] rounded-full bg-header-color' />
         </div>
       </section>
 
-      <section>{/* <HandA /> */}</section>
+      <section><HandA /> </section>
       <section>
         <AboutMe />
       </section>

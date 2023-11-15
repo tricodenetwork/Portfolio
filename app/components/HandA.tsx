@@ -50,7 +50,7 @@ const HandA = () => {
       <h2 className='py-10 text-center font-bold text-[52px]'>
         Honors And Awards
       </h2>
-      <div className='flex items-center flex-col overflow-hidden border border-black justify-around  min-h-[70vh]'>
+      <div className='flex items-center flex-col overflow-hidden  border-black justify-around  min-h-[70vh]'>
         {awards.map((text, index) => (
           <motion.div
             key={index.toString()}

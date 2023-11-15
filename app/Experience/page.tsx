@@ -1,3 +1,9 @@
+"use client";
+
+import useFonts from "@/hooks/useFonts";
+import { useState } from "react";
+import { RiArrowDropDownLine } from "react-icons/ri";
+
 const listExp = [
   {
     head: `Unique Oil and Integrated Services Limited Lagos, Nigeria Founder/CEO 2007-Till Date`,
@@ -5,10 +11,10 @@ const listExp = [
   },
   {
     head: `NAFDAC https://www.nafdac.gov.ng`,
-    text: `Led the company(Unique Oil and Integrated Services) to forge an indomitable partnership with the esteemed National Agency for Food and Drug Administration and Control (The US equivalent of the FDA).
-        Developed and implemented strategic plans to gain 70% improved energy sufficiency for operations of the national laboratories of NAFDAC.
-        My leadership and unwavering dedication to excellence have been so unparalleled that the NAFDAC retained our services through successive outgone and incoming Director Generals (Four Administrations), spanning a remarkable era from 2010 until now.
-        My extraordinary contributions to the institution (NAFDAC) led to the establishment's energy support service that ensured uninterrupted power supply and orchestrated efficient energy management, allowing the organization to execute its regulatory functions with unparalleled effectiveness and efficiency.`,
+    text: `Led the company(Unique Oil and Integrated Services) to forge an indomitable partnership with the esteemed National Agency for Food and Drug Administration and Control (The US equivalent of the FDA).`,
+    li_1: "Developed and implemented strategic plans to gain 70% improved energy sufficiency for operations of the national laboratories of NAFDAC.",
+    li_2: "My leadership and unwavering dedication to excellence have been so unparalleled that the NAFDAC retained our services through successive outgone and incoming Director Generals (Four Administrations), spanning a remarkable era from 2010 until now.",
+    li_3: "My extraordinary contributions to the institution (NAFDAC) led to the establishment's energy support service that ensured uninterrupted power supply and orchestrated efficient energy management, allowing the organization to execute its regulatory functions with unparalleled effectiveness and efficiency.",
   },
   {
     head: `Kogi State Government, Nigeria https://kogistate.gov.ng`,
@@ -22,10 +28,9 @@ const listExp = [
 
 const proExp = [
   {
-    head: `International Journal of Public Administration and Management Research (IJPAMR), 
+    head: `International Journal of Public Administration and Management Research (IJPAMR)`,
+    head2: "ISSN2346-7215(Print)ISSN: 2350-2231(Online).",
 
-        ISSN2346-7215(Print)
-        ISSN: 2350-2231(Online).`,
     text: `Editorial Board Member: 2023-till date https://journals.rcmss.com/index.php/ijpamr/about/editorialTeam
         Reviewed and selected Journal papers for publication. Paper reviewed
         Invitation: Institute of Management Consultants & London Graduate School
@@ -80,63 +85,139 @@ const volExp = [
   },
 ];
 export default function Experience() {
+  const { poppins } = useFonts();
+  const [truncate, setTruncate] = useState(true);
+  const [index, setIndex] = useState(0);
+
+  const truncateSection = (i: number) => {
+    setTruncate(!truncate);
+    setIndex(i);
+  };
+
   return (
-    <section className="bg-white p-5">
-      <h2 className="font-bold text-[42px] my-10 py-10 text-center">
-        Work Experience
-      </h2>
-      <div className="px-5 md:px-20">
-        {listExp.map((exp, i) => (
-          <div
-            key={i}
-            className="border-l-yellow-400 border-l-2 bg-white rounded-lg h-fit p-10 flex flex-col gap-3 shadow-xl mb-10"
-          >
-            <h3 className="font-bold text-lg">{exp.head}</h3>
-            <p>{exp.text}</p>
-          </div>
-        ))}
-      </div>
-      <section className="bg-gray-300">
-        <h2 className="font-bold text-[42px] my-10 py-10 text-center">
+    <>
+      <section className='bg-white'>
+        <h2
+          className={`mt-[56px] mb-[50px] font-bold text-[42px] lg:mt-[60px] lg:mb-[100px] text-center`}
+        >
+          Work Experience
+        </h2>
+        <div className='px-5  md:px-20 w-[95%] mx-auto'>
+          {listExp.map((exp, i) => (
+            <div
+              key={i.toString()}
+              className={` ${
+                !truncate && index === i ? "min-h-max" : "h-[600px]"
+              }  justify-start sm:p-[32px] pt-2 pb-10 relative pl-[30px] pr-[26px] border-l-yellow-400 shadow-[0_2px_10px_rgba(28,25,25,0.16)]  border-l-4 sm:h-[750px] lg:h-[500px] bg-white rounded-lg  flex flex-col sm:justify-center gap-4  mb-[50px]`}
+            >
+              <h3 className='font-semibold break-all text-[22px] leading-[22px] lg:text-[28px] lg:leading-[28px]'>
+                {exp.head}
+              </h3>
+              <p className=' text-[20px] hidden sm:flex lg:text-[24px]  leading-[30px]'>
+                {exp.text}
+              </p>
+              <p className=' text-[20px] sm:hidden lg:text-[24px]  leading-[30px]'>
+                {!truncate && index === i
+                  ? exp.text
+                  : exp.text.slice(0, 250).concat("...")}
+              </p>
+              {exp.li_1 && (
+                <ul className='list-disc ml-4 hidden sm:flex sm:flex-col space-y-3 text-[20px] lg:text-[22px] leading-[30px]'>
+                  <li>{exp.li_1}</li>
+                  <li>{exp.li_2}</li>
+                  <li>{exp.li_3}</li>
+                </ul>
+              )}
+              <div className='sm:hidden'>
+                {exp.li_1 && !truncate && index === i && (
+                  <ul className='list-disc flex sm:hidden space-y-3 text-[20px] lg:text-[26px] leading-[30px]'>
+                    <li>{exp.li_1}</li>
+                    <li>{exp.li_2}</li>
+                    <li>{exp.li_3}</li>
+                  </ul>
+                )}
+                {exp.li_1 && truncate && "...."}
+              </div>
+              <div className='flex sm:hidden absolute bottom-1 right-2 self-end items-center space-x-3'>
+                <p
+                  style={poppins.style}
+                  className='font-semibold text-[22px] leading-[22px]'
+                >
+                  Read more...
+                </p>
+                <button
+                  className={`${
+                    index === i && !truncate ? "rotate-180" : "rotate-0"
+                  }`}
+                  onClick={() => {
+                    truncateSection(i);
+                  }}
+                >
+                  <RiArrowDropDownLine />
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className='sm:w-[90%] sm:mx-[32px]'>
+        <h2
+          style={poppins.style}
+          className='font-semibold text-[32px] w-[205px] sm:w-[577px] mx-auto leading-[56px] mt-[16px] mb-[50px] text-center'
+        >
           Professional Experience
         </h2>
-        <div className="w-[90%] m-auto grid grid-cols-1 md:grid-cols-3  gap-4 min-h-screen">
+        <div className='w-[320px] sm:w-[100%] m-auto grid   grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-[30px] max-h-max'>
           {proExp.map((exp, i) => (
             <div
               key={i}
-              className=" border-t-2 border-t-gray-800 p-10 flex flex-col gap-3 w-full"
+              className=' border-t-2  border-t-gray-800 pt-[20px] flex flex-col gap-3 w-[320px]'
             >
-              <h3 className="font-bold text-lg">{exp.head}</h3>
-              <p className={`line-clamp-5`}>{exp.text}</p>
+              <h3
+                style={poppins.style}
+                className='font-semibold text-[22px] leading-[28px]'
+              >
+                {exp.head}
+              </h3>
+              {exp.head2 && (
+                <h3
+                  style={poppins.style}
+                  className='font-semibold mt-2 text-[22px] leading-[30px]'
+                >
+                  {exp.head2}
+                </h3>
+              )}
+              <p className={`line-clamp-5 mt-[30px]`}>{exp.text}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="bg-[#424E60] mb-3">
-        <h2 className="font-bold text-[42px] py-10 text-white  text-center">
+      <section className='bg-[#424E60] px-[36px] mb-3'>
+        <h2 className='font-semibold w-[176px] mx-auto text-[32px] leading-[56px] mt-[31px] mb- text-white  text-center'>
           Volunteer Experience
         </h2>
-        <div className="w-[90%] m-auto md:w-[70%] grid grid-col-1 md:grid-cols-2  gap-4 min-h-screen mb-4">
+        <div className='w-full m-auto  grid grid-col-1 md:grid-cols-2  gap-4 min-h-screen mb-4'>
           {volExp.map((exp, i) => (
             <div
               key={i}
-              className="border-l-yellow-400 border-l-2 bg-white rounded-lg h-fit p-10 flex flex-col gap-3 mb-4"
+              className='border-l-yellow-400 border-l-4 bg-white rounded-lg w-[365px] h-[365px] justify-center p-10 flex flex-col gap-3 mb-4'
             >
-              <h3 className="font-bold text-lg">{exp.head}</h3>
-              <p>{exp.text}</p>
+              <h3 className='font-bold text-lg'>{exp.head}</h3>
+              <p className='text-[16px]'>{exp.text}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className=" mb-3">
-        <h2 className="font-bold text-[42px] py-10   text-center">
+      {/* <section className=' mb-3'>
+        <h2 className='font-bold text-[42px] py-10   text-center'>
           Research Experience
         </h2>
-        <div className="w-[90%] m-auto md:w-[70%] grid grid-col-1 md:grid-cols-2  gap-4 min-h-screen mb-4">
+        <div className='w-[90%] m-auto md:w-[70%] grid grid-col-1 md:grid-cols-2  gap-4 min-h-screen mb-4'>
           <div>
-            <h2 className="font-bold">
+            <h2 className='font-bold'>
               Westcliff University/Department of Business Administration/Irvine,
               CA, USA Doctoral Student 2017-2022
             </h2>
@@ -148,7 +229,7 @@ export default function Experience() {
               Electronic Stamp Duty Collections (A Case Study).
             </h3>
 
-            <h2 className="font-bold my-12">Brief description of Project</h2>
+            <h2 className='font-bold my-12'>Brief description of Project</h2>
 
             <p>
               In this scholarly presentation, I embark on an immersive journey
@@ -226,7 +307,7 @@ export default function Experience() {
           </div>
 
           <div>
-            <h2 className="font-bold">
+            <h2 className='font-bold'>
               Coventry University, London Campus/Department of Business
               Administration/London, UK
             </h2>
@@ -236,7 +317,7 @@ export default function Experience() {
               the South American and the Caribbean Oil and Gas Market.”
             </h3>
 
-            <h2 className="font-bold  my-12">Tasks</h2>
+            <h2 className='font-bold  my-12'>Tasks</h2>
 
             <p>
               Conducted extensive research to identify market entry strategies
@@ -280,7 +361,7 @@ export default function Experience() {
             </p>
           </div>
         </div>
-      </section>
-    </section>
+      </section> */}
+    </>
   );
 }

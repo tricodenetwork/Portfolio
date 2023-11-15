@@ -17,8 +17,6 @@ import aw16 from "@/public/assets/aw16.png";
 import aw17 from "@/public/assets/aw17.png";
 import Image from "next/image";
 
-
-
 const images = [
   aw,
   aw1,
@@ -40,20 +38,23 @@ const images = [
 ];
 const ProfessionalA = () => {
   return (
-    <div id='certification' className="text-center w-full md:px-20 m-auto p-5 py-20 bg-white">
-      <h4 className="text-center text-[48px] text-bold">
-        {" "}
-        Professional Association{" "}
+    <div
+      id='certification'
+      className='text-center overflow-hidden w-full md:px-20 m-auto p-5 py-20 bg-white'
+    >
+      <h4 className='text-center text-[48px] leading-[56px] font-semibold'>
+        Professional Association
       </h4>
 
-          <div className="grid md:grid-cols-5 gap-5 justify-center">
-              {
-                  images.map((img, i) => (
-                      <div className=' shadow-lg w-[200px] grid place-content-center h-[200px]' key={i}>
-                          <Image src={img} alt="" className="w-full object-contain"/>
-                      </div>
-                  ))
-              }
+      <div className='flex lg:grid min-w-max lg:grid-cols-5 gap-5 justify-center'>
+        {images.map((img, i) => (
+          <div
+            className='w-[200px] relative  border-black h-[200px]'
+            key={i.toString()}
+          >
+            <Image src={img} alt='cert' fill className='' objectFit='contain' />
+          </div>
+        ))}
       </div>
     </div>
   );
