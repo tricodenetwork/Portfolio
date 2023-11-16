@@ -26,7 +26,8 @@ export default function Home() {
           <div className='space-y-10'>
             <p className=" [font-family:'Poppins-Regular',Helvetica] lg:w-[645px] font-normal text-body-color text-[18px] md:text-[26px] tracking-[0] leading-[39px]">
               Unique Group, Inc.
-              Founder CEO 
+              Founder CEO
+              Beverly Hills, CA, USA.
               
             </p>
           
@@ -71,7 +72,7 @@ export default function Home() {
           </p>
         </div>
 
-        <Contact />
+        <ContactMe />
       </section>
     </div>
   );
