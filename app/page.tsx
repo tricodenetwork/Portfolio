@@ -21,22 +21,15 @@ export default function Home() {
             style={poppins.style}
             className=' w-full md:w-[543px] font-semibold text-header-color text-[52px] lg:text-[52px] tracking-[0] leading-[70px]'
           >
-            Dr. Eng. Malik Abdullahi Adaviriku FIMC, CMC.
+            Dr. Malik Abdullahi Adaviriku CMC
           </h4>
           <div className='space-y-10'>
             <p className=" [font-family:'Poppins-Regular',Helvetica] lg:w-[645px] font-normal text-body-color text-[18px] md:text-[26px] tracking-[0] leading-[39px]">
-              Engineering Solutions with Expert Consultation. Bridging Vision
-              and Execution for Optimal Results. Where Technical Prowess Meets
-              Strategic Insight.
+              Unique Group, Inc.
+              Founder CEO 
+              
             </p>
-            <button className='flex w-[200px] items-center justify-center gap-[10.67px] px-[42.67px] py-[18.67px] relative bg-[#28293e] rounded-[5.33px]  box-border'>
-              <Link
-                href={"#contact"}
-                className='relative w-fit mt-[-1.33px] ml-[-29.17px] mr-[-29.17px] font-header font-[number:var(--header-font-weight)] text-white text-[length:var(--header-font-size)] tracking-[var(--header-letter-spacing)] leading-[var(--header-line-height)] whitespace-nowrap [font-style:var(--header-font-style)]'
-              >
-                Get In Touch
-              </Link>
-            </button>
+          
           </div>
         </div>
         <div className=' sm:absolute top-[239px] right-0 lg:relative lg:right-0 lg:top-0 sm:w-[385.43px] sm:h-[561px] 2xl w-full lg:w-[482px]  lg:h-[802px]'>
@@ -72,12 +65,13 @@ export default function Home() {
         <div className='text-center'>
           <h2 className=' font-bold text-[52px] py-10'>Interest</h2>
           <p>
-            Politics: Aspirant for Senate House, 2019 Federal Republic of
+            Politics Experience: 
+            Aspirant for Senate House, 2019 Federal Republic of
             Nigeria, Community service and environmental protection programs.
           </p>
         </div>
 
-        <ContactMe />
+        <Contact />
       </section>
     </div>
   );
