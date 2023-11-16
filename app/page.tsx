@@ -19,14 +19,15 @@ export default function Home() {
         <div className='space-y-10 h-[1006px] lg:h-full  lg:max-h-max flex flex-col sm:justify-between lg:justify-center  z-10 ml-[52px]'>
           <h4
             style={poppins.style}
-            className=' w-full md:w-[543px] font-semibold text-header-color text-[52px] lg:text-[52px] tracking-[0] leading-[70px]'
+            className=' w-full md:w-[543px] font-semibold text-header-color text-[52px] lg:text-[51px] tracking-[0] leading-[70px]'
           >
             Dr. Malik Abdullahi Adaviriku CMC
           </h4>
           <div className='space-y-10'>
             <p className=" [font-family:'Poppins-Regular',Helvetica] lg:w-[645px] font-normal text-body-color text-[18px] md:text-[26px] tracking-[0] leading-[39px]">
-              Unique Group, Inc.
+             <strong> Unique Group, Inc.
               Founder CEO
+             </strong>
               Beverly Hills, CA, USA.
               
             </p>
