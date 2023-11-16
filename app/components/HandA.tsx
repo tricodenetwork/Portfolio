@@ -76,7 +76,7 @@ const HandA = () =>{
     return (
         <div id='handa' className='py-24 min-h-screen flex flex-col gap-10  w-screen md:px-20 m-auto bg-white overflow-hidden'>
             <h2 className='py-10 text-center font-bold text-[52px]'>Honors And Awards</h2>
-            <div className="flex items-center flex-col justify-around  min-h-[70vh] overflow-hidden w-screen relative">
+            <div className="flex items-center flex-col justify-around  min-h-[70vh] overflow-hidden w-full relative">
         {awards.map((text, index) => (
           <motion.div
             key={index}
