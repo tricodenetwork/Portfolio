@@ -18,7 +18,7 @@ const ContactMe = () => {
           </div>
           <div>
             <p>Address:</p>
-            <p className="font-bold">Lagos Nigeria 31134</p>
+            <p className="font-bold"> Beverly Hills, CA, USA.</p>
           </div>
         </div>
 
@@ -28,7 +28,7 @@ const ContactMe = () => {
           </div>
           <div>
             <p>Email:</p>
-            <p className="font-bold">mymail@mail.com</p>
+            <p className="font-bold">adavs1@yahoo.com</p>
           </div>
         </div>
 
