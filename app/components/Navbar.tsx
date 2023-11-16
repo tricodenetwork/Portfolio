@@ -39,7 +39,7 @@ const Navbar = () => {
   //------------------------------------------------------------------USE EFFECTS
 
   return (
-    <div className='relative shadow-sm  shadow-slate-300   flex items-center lg:justify-around bg-white h-[7vh] lg:h-[12vh]'>
+    <div className='relative shadow-sm  shadow-slate-300 z-20   flex items-center lg:justify-around bg-white h-[7vh] lg:h-[12vh]'>
       <Image
         alt='logo'
         className='ml-5 lg:ml-0'
