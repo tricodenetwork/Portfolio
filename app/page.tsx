@@ -66,7 +66,7 @@ export default function Home() {
         <div className='text-center'>
           <h2 className=' font-bold text-[52px] py-10'>Interest</h2>
           <p>
-            Politics Experience: 
+            <strong>Politics Experience:</strong> 
             Aspirant for Senate House, 2019 Federal Republic of
             Nigeria, Community service and environmental protection programs.
           </p>
