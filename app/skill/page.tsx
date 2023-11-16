@@ -84,6 +84,7 @@ const CerificateCard = ({ title, desc }: { title: string; desc: string }) => {
 };
 
 const page = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { poppins } = useFonts();
   return (
     <div className='bg-white min-h-max w-full '>
@@ -94,8 +95,8 @@ const page = () => {
         Skill
       </h2>
       <div className=' sm:grid sm:grid-cols-2 lg:grid-cols-4'>
-        {skills.map((item) => (
-          <p className=' px-4  py-2 shadow-[0_3px_3px_rgba(0,0,0,0.25)] text-center w-[75%] rounded-md mb-[50px] mx-auto'>
+        {skills.map((item, i) => (
+          <p className=' px-4  py-2 shadow-[0_3px_3px_rgba(0,0,0,0.25)] text-center w-[75%] rounded-md mb-[50px] mx-auto' key={i}>
             {item}
           </p>
         ))}
@@ -117,8 +118,8 @@ const page = () => {
           Education
         </h2>
         <div className='lg:grid lg:grid-cols-2'>
-          {Education.map((item) => (
-            <div className='mb-[50px] px-[20px]'>
+          {Education.map((item, i) => (
+            <div className='mb-[50px] px-[20px]' key={i}>
               <h3
                 style={poppins.style}
                 className='text-indicatot w-[80%] sm:w-full mb-[20px] text-[22px] leading-[22px]'
@@ -140,8 +141,8 @@ const page = () => {
           Certification/Management- Related Licence
         </h2>
         <div className='sm:grid sm:grid-cols-2 lg:grid-cols-3  mb-[50px] gap-[89px]'>
-          {cert.map((item) => (
-            <CerificateCard title={item.title} desc={item.desc} />
+          {cert.map((item, i) => (
+            <CerificateCard title={item.title} desc={item.desc} key={i} />
           ))}
         </div>
       </section>

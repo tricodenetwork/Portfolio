@@ -1,7 +1,7 @@
 
 "use client"
 import {motion} from 'framer-motion';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from "next/image"
 import AwardImg from "@/public/assets/awa.png";
 
@@ -16,13 +16,25 @@ const awards = [
 const HandA = () =>{
     const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4]);
     const [currentIndex, setCurrentIndex] = useState(2);
-    const handleNext = () => {
+   
+    // useEffect(() => {
+    //   const intervalId = setInterval(() => {
+    //     handleDragEnd({}, {offset:{x:300}})
+    //   }, 5000); 
+  
+    //   // Clear the interval when the component unmounts or on cleanup
+    //   return () => clearInterval(intervalId);
+    // }, [])
+  
+  const handleNext = () => {
       setPositionIndexes((prevIndexes) => {
         const updatedIndexes = prevIndexes.map(
           (prevIndex) => (prevIndex + 1) % 5
         );
+      
         const setNewIndex = currentIndex >= 4? 1 : currentIndex + 1
-        setCurrentIndex(setNewIndex );
+        setCurrentIndex(setNewIndex);
+        
         return updatedIndexes;
       });
     };
@@ -32,7 +44,7 @@ const HandA = () =>{
         const updatedIndexes = prevIndexes.map(
           (prevIndex) => (prevIndex + 4) % 5
         );
-
+      //  console.log(currentIndex)
         const setNewIndex = currentIndex <= 0 ? 4 : currentIndex - 1
         setCurrentIndex(setNewIndex );
         return updatedIndexes;
@@ -53,10 +65,12 @@ const HandA = () =>{
   const handleDragEnd = (event: any, info: { offset: { x: number; }; }) => {
     //console.log(currentIndex, info)
     const swipeThreshold = 40; 
-    if (info.offset.x > swipeThreshold) {
+    if (info?.offset?.x > swipeThreshold) {
       handleNext();
-    } else if (info.offset.x < -swipeThreshold) {
+    } else if (info?.offset?.x < -swipeThreshold) {
       handleBack();
+    } else {
+      handleNext();
     }
   };
     return (
