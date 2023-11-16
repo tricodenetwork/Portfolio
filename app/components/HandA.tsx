@@ -14,43 +14,40 @@ const awards = [
 const HandA = () => {
   const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4]);
 
-  const handleNext = () => {
-    setPositionIndexes((prevIndexes) => {
-      const updatedIndexes = prevIndexes.map(
-        (prevIndex) => (prevIndex + 1) % 5
-      );
-      return updatedIndexes;
-    });
-  };
-
-  const handleBack = () => {
-    setPositionIndexes((prevIndexes) => {
-      const updatedIndexes = prevIndexes.map(
-        (prevIndex) => (prevIndex + 4) % 5
-      );
-
-      return updatedIndexes;
-    });
-  };
-
-  const positions = ["center", "left1", "left", "right", "right1"];
-
-  const imageVariants = {
-    center: { x: "0%", scale: 1, zIndex: 5 },
-    left1: { x: "-50%", scale: 0.7, zIndex: 3 },
-    left: { x: "-90%", scale: 0.5, zIndex: 2 },
-    right: { x: "90%", scale: 0.5, zIndex: 1 },
-    right1: { x: "50%", scale: 0.7, zIndex: 3 },
-  };
-  return (
-    <div
-      id='handa'
-      className='py-24 min-h-screen flex flex-col gap-10  w-full md:px-20 m-auto bg-white'
-    >
-      <h2 className='py-10 text-center font-bold text-[52px]'>
-        Honors And Awards
-      </h2>
-      <div className='flex items-center flex-col overflow-hidden  border-black justify-around  min-h-[70vh]'>
+    const handleNext = () => {
+      setPositionIndexes((prevIndexes) => {
+        const updatedIndexes = prevIndexes.map(
+          (prevIndex) => (prevIndex + 1) % 5
+        );
+        return updatedIndexes;
+      });
+    };
+  
+    const handleBack = () => {
+      setPositionIndexes((prevIndexes) => {
+        const updatedIndexes = prevIndexes.map(
+          (prevIndex) => (prevIndex + 4) % 5
+        );
+  
+        return updatedIndexes;
+      });
+    };
+  
+    
+  
+    const positions = ["center", "left1", "left", "right", "right1"];
+  
+    const imageVariants = {
+      center: { x: "0%", scale: 1, zIndex: 5 },
+      left1: { x: "-50%", scale: 0.7, zIndex: 3 },
+      left: { x: "-90%", scale: 0.5, zIndex: 2 },
+      right: { x: "90%", scale: 0.5, zIndex: 1 },
+      right1: { x: "50%", scale: 0.7, zIndex: 3 },
+    };
+    return (
+        <div id='handa' className='py-24 min-h-screen flex flex-col gap-10  w-full md:px-20 m-auto bg-white'>
+            <h2 className='py-10 text-center font-bold text-[52px]'>Honors And Awards</h2>
+            <div className="flex items-center flex-col justify-around  min-h-[70vh]">
         {awards.map((text, index) => (
           <motion.div
             key={index.toString()}
