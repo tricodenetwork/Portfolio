@@ -38,7 +38,7 @@ const ContactMe = () => {
           </div>
           <div>
             <p>Phone:</p>
-            <p className="font-bold">080-1234 00000</p>
+            <p className="font-bold">+1 949 372 9715</p>
           </div>
         </div>
       </div>
