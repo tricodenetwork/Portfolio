@@ -292,14 +292,14 @@ export default function Experience() {
                 <br />
                 <br />
                 <b className='font-bold text-[18px] leading-[24px]'>
-                  Understanding the "How" and "Methods":
+                  Understanding the &quot;How&quot; and &quot;Methods&quot;:
                 </b>{" "}
                 <p>
                   Central to my academic endeavor is a comprehensive
                   understanding of the modus operandi adopted by the syndicate.
                   I meticulously dissect the intricate methods employed, ranging
                   from falsified documentation to strategic collusion, unveiling
-                  the intricate tactics that enabled the fraud's gradual
+                  the intricate tactics that enabled the fraud&apos;s gradual
                   evolution into an advanced and complex phenomenon. This
                   detailed exploration serves as a foundation for comprehending
                   the depth of the challenge at hand.

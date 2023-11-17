@@ -10,11 +10,11 @@ import Image from "next/image";
 import Logo from "@/public/assets/aw17.png";
 
 const listStyle: string =
-  "text-[16px] min-h-max   leading-[16px] list relative cursor-pointer hover:opacity- duration-200  flex flex-col items-center my-[14px] md:mb-0 mt-[40px] md:mt-0 md:text-[20px] md:leading-[20px] text-[#132238] font-semibold";
+  "text-[16px] min-h-max   leading-[16px] list relative cursor-pointer hover:opacity- duration-200  flex flex-col items-center my-[14px] lg:mb-0 mt-[40px] lg:mt-0 md:text-[20px] lg:leading-[20px] text-[#132238] font-semibold";
 const skills = [
   { title: "Skill", link: "skill" },
   { title: "Education", link: "#Education" },
-  { title: "Certification/License", link: "#Certification" },
+  // { title: "Certification/License", link: "#Certification" },
 ];
 const work = [
   { title: "Experience", link: "Experience" },
@@ -48,11 +48,11 @@ const Navbar = () => {
         src={Logo}
       />
       <ul
-        className={`w-[60vw] menu  ${
+        className={`pl-5 w-[60vw] menu  ${
           !isOpen
             ? "-translate-x-full opacity-0"
             : "translate-x-0 opacity-100 scale-100 z-10"
-        }  h-[93vh] lg:h-full  duration-300 lg:translate-x-0  lg:opacity-100 transition-all ease-linear  lg:flex-row items-start justify-start lg:justify-between lg:items-center absolute lg:relative top-[6.5vh] lg:top-0 left-0 flex flex-col bg-white`}
+        }  h-[95vh] lg:h-full  duration-300 lg:translate-x-0  lg:opacity-100 transition-all ease-linear  lg:flex-row items-start justify-start lg:justify-between lg:items-center absolute lg:relative top-[6.5vh] lg:top-0 left-0 flex flex-col bg-white`}
       >
         <li className={listStyle}>
           <Link href={"#handa"}>Honours/Awards</Link>
@@ -72,7 +72,7 @@ const Navbar = () => {
               <RiArrowDropDownLine />
             </div>
           </div>
-          <SubMenu list={skills} />
+          <SubMenu toggle={toggleMenu} list={skills} />
         </li>
         <li className={listStyle}>
           <Link href={"#certification"}>Certification</Link>
@@ -84,20 +84,20 @@ const Navbar = () => {
               <RiArrowDropDownLine />
             </div>
           </div>
-          <SubMenu list={work} />
+          <SubMenu toggle={toggleMenu} list={work} />
         </li>
         <Link
           href={"#contact"}
           className='px-5 py-4 absolute lg:relative lg:hidden flex top-[60vh] lg:top-0  ml-[12px] lg:mr-[  14px] font-semibold text-[20px] tracking-[var(--header-letter-spacing)] [font-style:var(--header-font-style)] leading-[var(--header-line-height)] text-white bg-header-color rounded-md'
         >
-          Contact Me
+          Contact
         </Link>
       </ul>
       <Link
         href={"#contact"}
         className='px-5 py-4 absolute lg:relative lg:flex hidden top-[60vh] md:top-0  ml-[12px] md:mr-[  14px] font-semibold text-[20px] tracking-[var(--header-letter-spacing)] [font-style:var(--header-font-style)] leading-[var(--header-line-height)] text-white bg-header-color rounded-md'
       >
-        Contact Me
+        Contact
       </Link>
       <div
         onClick={toggleMenu}
