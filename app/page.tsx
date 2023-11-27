@@ -1,49 +1,78 @@
 import Image from "next/image";
-import Navbar from "./components/Navbar";
-import Hero from "@/public/hero.png";
+
+import Hero from "@/public/assets/hero.png";
+import HandA from "./components/HandA";
+import AboutMe from "./components/AboutMe";
+import ProfessionalA from "./components/ProffesionalA";
+import ContactMe from "./components/Contact";
+import Link from "next/link";
+import useFonts from "@/hooks/useFonts";
 
 export default function Home() {
+  const { poppins } = useFonts();
   return (
-    <main className='flex min-h-screen flex-col items-center justify-start'>
-      <Navbar />
+    <div className='w-full h-max'>
       <section
         id='hero'
-        className=' flex w-full mt-10 relative h-[88vh]  justify-between items-center'
+        className='m-auto w-full  flex flex-col  pt-[30px] gap-3 md:flex-row  lg:h-[802px]  relative  justify-between items-center'
       >
-        <div className='space-y-10 pl-10 max-h-max'>
-          <h4 className=" w-[60vw] md:w-[60vw]  [font-family:'Poppins-SemiBold',Helvetica] font-semibold text-header-color text-[22px] md:text-[66px] tracking-[0] leading-8 md:leading-[70px]">
-            Engr. Dr, A. Malik FIMC, CMC.
+        <div className='space-y-10 h-[650px] sm:h-[1006px] lg:h-full  lg:max-h-max flex flex-col justify-between lg:justify-center  z-10 ml-5 sm:ml-[52px]'>
+          <h4
+            style={poppins.style}
+            className=' w-[367px] md:w-[543px] font-semibold text-header-color text-[32px] leading-[56px] lg:text-[51px] tracking-[0] lg:leading-[70px]'
+          >
+            Dr. Malik Abdullahi Adaviriku CMC
           </h4>
-          <p className=" w-[38vw] [font-family:'Poppins-Regular',Helvetica] font-normal text-body-color text-[18px] md:text-[26px] tracking-[0] leading-[39px]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique.
-          </p>
-          <button className='flex w-[200px] items-center justify-center gap-[10.67px] px-[42.67px] py-[18.67px] relative bg-[#28293e] rounded-[5.33px]  box-border'>
-            <div className='relative w-fit mt-[-1.33px] ml-[-29.17px] mr-[-29.17px] font-header font-[number:var(--header-font-weight)] text-white text-[length:var(--header-font-size)] tracking-[var(--header-letter-spacing)] leading-[var(--header-line-height)] whitespace-nowrap [font-style:var(--header-font-style)]'>
-              Get In Touch
-            </div>
-          </button>
+          <div className='space-y-10'>
+            <p className=" mb-5  [font-family:'Poppins-Regular',Helvetica] lg:w-[645px] font-normal text-body-color text-[20px] leading-[28.1px] md:text-[26px] tracking-[0] md:leading-[39px]">
+              <strong> Unique Group, Inc. Founder CEO</strong> Beverly Hills,
+              CA, USA.
+            </p>
+          </div>
         </div>
-        <div className='relative  2xl w-[630px]  h-[88vh]'>
+        <div className='absolute top-[180px] sm:absolute  sm:top-[239px] right-0 lg:relative lg:right-0 lg:top-0 w-[251px] h-[367px] sm:w-[385.43px] sm:h-[561px]  lg:w-[482px]  lg:h-[802px]'>
           <Image
             fill
             priority
             // width={722}
             // height={600}
             // sizes='40vw'
-            className=''
+            className='object-contain lg:object-cover'
             style={{
               // width: "100%",
               // height: "auto",
-              objectFit: "cover",
+              // objectFit: "contain",
+              zIndex: "-10",
             }}
             src={Hero}
             alt='hero'
             quality={100}
           />
+          <div className='w-[377px] h-[377px] sm:w-[527px] sm:h-[527px] lg:w-[752px]  border border-blue-950 absolute bottom-0 right-[0px]  -z-20 lg:h-[752px] rounded-full bg-header-color' />
         </div>
       </section>
-      <section className='h-[973px] bg-white w-full'></section>
-    </main>
+
+      <section>
+        <HandA />
+      </section>
+      <section>
+        <AboutMe />
+      </section>
+      <section>
+        <ProfessionalA />
+      </section>
+      <section className='bg-[#F6F5F5] p-2'>
+        <div className='text-center'>
+          <h2 className=' font-bold text-[52px] py-10'>Interest</h2>
+          <p>
+            <strong>Politics Experience:</strong>
+            Aspirant for Senate House, 2019 Federal Republic of Nigeria,
+            Community service and environmental protection programs.
+          </p>
+        </div>
+
+        <ContactMe />
+      </section>
+    </div>
   );
 }

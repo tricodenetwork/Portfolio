@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import Navbar from "./components/Navbar";
 const font = Work_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -18,7 +17,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={font.className}>{children}</body>
+      <body className={`${font.className}`}>
+        <Navbar />
+        <main className='flex min-h-screen flex-col items-center justify-start '>
+          {children}
+        </main>
+        <footer className='grid place-content-center min-h-[20vh] text-white bg-gray-800'>
+          <div className='text-center'>Copyright © 2023 .</div>
+        </footer>
+      </body>
     </html>
   );
 }
